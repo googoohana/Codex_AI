@@ -1,4 +1,4 @@
-﻿﻿# AI 영상 제작 파이프라인 A단계 구현 계획
+﻿# AI 영상 제작 파이프라인 A단계 구현 계획
 
 > **실행 작업자 필수 하위 스킬:** 이 계획을 작업별로 실행할 때는 `superpowers:subagent-driven-development` 또는 `superpowers:executing-plans`를 사용한다. 모든 단계는 체크박스(`- [ ]`)로 추적한다.
 
@@ -267,11 +267,10 @@ Use `apply_patch` to create `docs/OFFICIAL_MODEL_GUIDE.md` with this structure:
 
 ## 참고한 공식 자료
 
-1. Kling VIDEO 3.0 Model User Guide: https://kling.ai/quickstart/klingai-video-3-model-user-guide
-2. Kling VIDEO 3.0 Omni Model User Guide: https://kling.ai/quickstart/klingai-video-3-omni-model-user-guide
-3. ByteDance Seedance 2.0 Official Launch: https://seed.bytedance.com/en/blog/seedance-2-0-official-launch
-4. BytePlus Dreamina Seedance 2.0 Prompt Guide: https://docs.byteplus.com/ko/docs/ModelArk/2222480
-5. BytePlus Seedance 2.0 API Reference: https://docs.byteplus.com/en/docs/modelark/1520757
+1. Kling VIDEO 3.0 Model User Guide: https://app.klingai.com/cn/quickstart/klingai-video-3-model-user-guide
+2. ByteDance Seedance 2.0 Official Launch: https://seed.bytedance.com/en/blog/seedance-2-0-official-launch
+3. BytePlus Dreamina Seedance 2.0 Prompt Guide: https://docs.byteplus.com/ko/docs/ModelArk/2222480
+4. BytePlus Seedance 2.0 API Reference: https://docs.byteplus.com/en/docs/modelark/1520757
 
 ## Kling에서 배울 점
 

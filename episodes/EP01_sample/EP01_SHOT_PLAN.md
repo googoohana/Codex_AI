@@ -1,4 +1,4 @@
-﻿﻿# EP01_SHOT_PLAN
+﻿# EP01_SHOT_PLAN
 
 ## 컷 설계표
 
@@ -19,6 +19,15 @@
 - emotion: 피곤함, 불안, 침묵
 - dialogue_or_narration: 그날 아침, 정애는 거실 한가운데 앉아 한참 동안 아무 말도 하지 않았습니다.
 - planned_duration: 7초
+- target_video_model: undecided
+- generation_mode: image_to_video_first_frame
+- reference_assets: 김정애 캐릭터 참조, 집 거실 장소 참조
+- aspect_ratio: 16:9
+- audio_plan: tts_only
+- model_limit_note: C단계 직전에 선택 모델의 최신 공식 제한을 다시 확인한다
+- rights_or_face_policy: 가상 캐릭터만 사용하며 실존 인물 얼굴 참조를 사용하지 않는다
+- generation_risk: low
+- fallback_plan: 캐릭터 외모가 바뀌면 같은 구도로 재생성한다
 - video_model_note: 캐릭터 얼굴, 회색 파마머리, 베이지 가디건, 보라색 파우치를 유지한다. 장면 전환 없이 느린 움직임만 사용한다.
 - review_status: ready_for_image_prompt
 
@@ -39,6 +48,15 @@
 - emotion: 걱정, 조심스러움
 - dialogue_or_narration: 딸 민서는 그 침묵이 평소와 다르다는 것을 바로 알아차렸습니다.
 - planned_duration: 7초
+- target_video_model: undecided
+- generation_mode: image_to_video_first_frame
+- reference_assets: 김정애와 김민서 캐릭터 참조, 집 거실 장소 참조
+- aspect_ratio: 16:9
+- audio_plan: tts_only
+- model_limit_note: C단계 직전에 선택 모델의 최신 공식 제한을 다시 확인한다
+- rights_or_face_policy: 가상 캐릭터만 사용하며 실존 인물 얼굴 참조를 사용하지 않는다
+- generation_risk: medium
+- fallback_plan: 두 인물 일관성이 깨지면 카메라 구도를 단순화하거나 각 인물 컷으로 분리한다
 - video_model_note: 두 캐릭터의 얼굴, 의상, 나이대를 유지한다. 새로운 가족을 추가하지 않는다.
 - review_status: ready_for_image_prompt
 
@@ -59,6 +77,15 @@
 - emotion: 걱정, 절제, 다정함
 - dialogue_or_narration: 오늘은 병원에 같이 가자고 조용히 말했습니다.
 - planned_duration: 7초
+- target_video_model: undecided
+- generation_mode: image_to_video_first_frame
+- reference_assets: 김정애와 김민서 캐릭터 참조, 집 현관 장소 참조
+- aspect_ratio: 16:9
+- audio_plan: tts_only
+- model_limit_note: C단계 직전에 선택 모델의 최신 공식 제한을 다시 확인한다
+- rights_or_face_policy: 가상 캐릭터만 사용하며 실존 인물 얼굴 참조를 사용하지 않는다
+- generation_risk: medium
+- fallback_plan: 손 모양이나 두 인물 일관성이 깨지면 손을 잡기 직전 장면으로 단순화한다
 - video_model_note: 과장된 눈물이나 극적인 몸짓 없이 조용한 감정으로 유지한다.
 - review_status: ready_for_image_prompt
 
@@ -79,6 +106,15 @@
 - emotion: 긴장, 두려움, 절제
 - dialogue_or_narration: 의사의 설명이 이어지는 동안, 민서는 말없이 어머니 곁을 지켰습니다.
 - planned_duration: 8초
+- target_video_model: undecided
+- generation_mode: image_to_video_first_frame
+- reference_assets: 김정애, 김민서, 박의사 캐릭터 참조, 병원 진료실 장소 참조
+- aspect_ratio: 16:9
+- audio_plan: tts_only
+- model_limit_note: 다중 인물 일관성과 참조 자산 수 제한을 선택 모델의 최신 공식 문서에서 다시 확인한다
+- rights_or_face_policy: 가상 캐릭터만 사용하며 실존 인물 얼굴 참조를 사용하지 않는다
+- generation_risk: high
+- fallback_plan: 세 인물 일관성이 깨지면 의사 설명 컷과 모녀 반응 컷으로 분리한다
 - video_model_note: 병원은 차분하고 현실적으로 표현한다. 한 명의 의사만 등장하고 텍스트가 보이지 않게 한다.
 - review_status: ready_for_image_prompt
 
@@ -99,6 +135,15 @@
 - emotion: 두려움, 침착함, 체념
 - dialogue_or_narration: 정애는 보라색 파우치를 꼭 쥔 채 조용히 눈을 내리깔았습니다.
 - planned_duration: 7초
+- target_video_model: undecided
+- generation_mode: image_to_video_first_frame
+- reference_assets: 김정애 캐릭터 참조, 병원 진료실 장소 참조
+- aspect_ratio: 16:9
+- audio_plan: tts_only
+- model_limit_note: C단계 직전에 선택 모델의 최신 공식 제한을 다시 확인한다
+- rights_or_face_policy: 가상 캐릭터만 사용하며 실존 인물 얼굴 참조를 사용하지 않는다
+- generation_risk: low
+- fallback_plan: 얼굴이나 손이 깨지면 파우치와 표정을 중심으로 같은 구도에서 재생성한다
 - video_model_note: 얼굴 나이대, 회색 파마머리, 의상을 절대 바꾸지 않는다. 장면 전환을 만들지 않는다.
 - review_status: ready_for_image_prompt
 
@@ -119,6 +164,15 @@
 - emotion: 위로, 두려움, 함께 버팀
 - dialogue_or_narration: 두 사람은 같은 두려움을 함께 견디기 시작했습니다.
 - planned_duration: 9초
+- target_video_model: undecided
+- generation_mode: image_to_video_first_frame
+- reference_assets: 김정애와 김민서 캐릭터 참조, 병원 복도 장소 참조
+- aspect_ratio: 16:9
+- audio_plan: tts_only
+- model_limit_note: C단계 직전에 선택 모델의 최신 공식 제한을 다시 확인한다
+- rights_or_face_policy: 가상 캐릭터만 사용하며 실존 인물 얼굴 참조를 사용하지 않는다
+- generation_risk: medium
+- fallback_plan: 두 인물의 손이나 보행이 깨지면 뒤에서 나란히 걷는 장면으로 단순화한다
 - video_model_note: 느린 영화적 움직임만 사용하고 장면 전환이나 새로운 인물을 만들지 않는다.
 - review_status: ready_for_image_prompt
 
@@ -141,3 +195,6 @@ CUT_006  9초
 3. 장소와 금지 장소가 명확한가
 4. 예상 길이 합계가 목표 길이와 맞는가
 5. 모든 컷의 `review_status`가 `ready_for_image_prompt`인가
+6. 모델과 생성 모드를 확정하지 않은 상태가 명확하게 기록되었는가
+7. 참조 자산과 실존 인물 권리 정책이 기록되었는가
+8. 고위험 컷과 실패 대응 방법이 기록되었는가

@@ -1,4 +1,4 @@
-﻿﻿# EP01_CHARACTER_BIBLE
+﻿# EP01_CHARACTER_BIBLE
 
 ## 주인공 1: 김정애
 
@@ -13,6 +13,8 @@
 - 감정 톤: 피곤함, 불안, 품위, 따뜻함
 - 절대 바뀌면 안 되는 특징: 회색 파마머리, 베이지 가디건, 자주색 블라우스, 보라색 파우치
 - 이미지 프롬프트 고정 문장: 72-year-old Korean grandmother, short gray permed hair, beige cardigan, purple blouse, navy pants, holding a purple bankbook pouch, tired but clear eyes
+- 참조 자산 상태: 아직 생성하지 않음. 가상 캐릭터 참조 이미지만 사용할 예정
+- 실존 인물 또는 권리 정책: 실존 인물 기반이 아닌 가상 캐릭터이며, 권리 확인 없는 얼굴이나 목소리를 사용하지 않음
 
 ## 주인공 2: 김민서
 
@@ -27,6 +29,8 @@
 - 감정 톤: 걱정, 절제, 다정함
 - 절대 바뀌면 안 되는 특징: 어깨 길이 검은 머리, 짙은 초록색 니트, 차분한 표정
 - 이미지 프롬프트 고정 문장: 45-year-old Korean daughter, shoulder-length black hair, dark green knit sweater, black pants, small brown bag, calm but worried expression
+- 참조 자산 상태: 아직 생성하지 않음. 가상 캐릭터 참조 이미지만 사용할 예정
+- 실존 인물 또는 권리 정책: 실존 인물 기반이 아닌 가상 캐릭터이며, 권리 확인 없는 얼굴이나 목소리를 사용하지 않음
 
 ## 보조 인물: 박의사
 
@@ -41,6 +45,8 @@
 - 감정 톤: 진지함, 절제
 - 절대 바뀌면 안 되는 특징: 한 명의 의사만 등장, 과장된 표정 금지
 - 이미지 프롬프트 고정 문장: middle-aged Korean doctor, short neat black hair, white medical coat, calm and serious expression, holding a closed blank medical folder
+- 참조 자산 상태: 아직 생성하지 않음. 가상 캐릭터 참조 이미지만 사용할 예정
+- 실존 인물 또는 권리 정책: 실존 인물 기반이 아닌 가상 캐릭터이며, 권리 확인 없는 얼굴이나 목소리를 사용하지 않음
 
 ## 캐릭터 일관성 검수 기준
 

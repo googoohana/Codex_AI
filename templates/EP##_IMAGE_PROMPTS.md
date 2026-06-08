@@ -20,6 +20,8 @@
 - 행동:
 - 감정:
 - 카메라:
+- 참조 자산:
+- 권리/얼굴 정책:
 - 금지 요소:
 
 ### English Prompt
@@ -30,6 +32,8 @@ Location:
 Mood:
 Camera:
 Lighting:
+Reference Assets:
+Rights Policy:
 Constraints:
 
 ## 금지 요소 예시

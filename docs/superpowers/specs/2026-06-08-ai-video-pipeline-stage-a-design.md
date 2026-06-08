@@ -187,11 +187,10 @@ A단계에는 `OFFICIAL_MODEL_GUIDE.md` 문서를 포함합니다. 이 문서는
 
 이번 설계에서 참고한 공식 자료는 아래와 같습니다.
 
-1. Kling VIDEO 3.0 Model User Guide: https://kling.ai/quickstart/klingai-video-3-model-user-guide
-2. Kling VIDEO 3.0 Omni Model User Guide: https://kling.ai/quickstart/klingai-video-3-omni-model-user-guide
-3. ByteDance Seedance 2.0 Official Launch: https://seed.bytedance.com/en/blog/seedance-2-0-official-launch
-4. BytePlus Dreamina Seedance 2.0 Prompt Guide: https://docs.byteplus.com/ko/docs/ModelArk/2222480
-5. BytePlus Seedance 2.0 API Reference: https://docs.byteplus.com/en/docs/modelark/1520757
+1. Kling VIDEO 3.0 Model User Guide: https://app.klingai.com/cn/quickstart/klingai-video-3-model-user-guide
+2. ByteDance Seedance 2.0 Official Launch: https://seed.bytedance.com/en/blog/seedance-2-0-official-launch
+3. BytePlus Dreamina Seedance 2.0 Prompt Guide: https://docs.byteplus.com/ko/docs/ModelArk/2222480
+4. BytePlus Seedance 2.0 API Reference: https://docs.byteplus.com/en/docs/modelark/1520757
 
 ### Kling에서 가져올 핵심
 
