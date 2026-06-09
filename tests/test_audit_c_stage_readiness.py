@@ -120,6 +120,36 @@ class AuditCStageReadinessTests(unittest.TestCase):
         self.assertEqual(result.status, "blocked")
         self.assertIn("Kling 공식 API 접근 확인", "\n".join(result.issues))
 
+    def test_safe_comfy_cloud_config_is_ready(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            directory = Path(temp_dir)
+            config_path = self.write_config(
+                directory,
+                {
+                    "external_calls_allowed": True,
+                    "dry_run_required": True,
+                    "max_test_cuts": 1,
+                    "max_budget_krw": 10000,
+                    "rights_policy": "fictional_only",
+                    "seedance": {"enabled": False},
+                    "kling": {"enabled": False},
+                    "comfy_cloud": {
+                        "enabled": True,
+                        "subscription_ready": True,
+                        "api_key_env": "COMFY_CLOUD_API_KEY",
+                        "readonly_connection_verified": True,
+                        "workflow_api_json_ready": True,
+                        "estimated_credits_per_run": 20,
+                        "max_credits_per_run": 20,
+                    },
+                },
+            )
+
+            result = audit_readiness(config_path, directory / "REPORT.md")
+
+        self.assertEqual(result.status, "ready")
+        self.assertEqual(result.issues, ())
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -50,13 +50,20 @@ def _collect_issues(config: dict[str, Any]) -> list[str]:
 
     seedance = config.get("seedance", {})
     kling = config.get("kling", {})
-    if not seedance.get("enabled") and not kling.get("enabled"):
+    comfy_cloud = config.get("comfy_cloud", {})
+    if (
+        not seedance.get("enabled")
+        and not kling.get("enabled")
+        and not comfy_cloud.get("enabled")
+    ):
         issues.append("최소 한 개의 영상 서비스를 선택해야 합니다.")
 
     if seedance.get("enabled"):
         _check_seedance(seedance, issues)
     if kling.get("enabled"):
         _check_kling(kling, issues)
+    if comfy_cloud.get("enabled"):
+        _check_comfy_cloud(comfy_cloud, issues)
 
     return issues
 
@@ -106,6 +113,28 @@ def _check_kling(kling: dict[str, Any], issues: list[str]) -> None:
         issues.append("Kling 접근 방식을 web_ui 또는 api로 선택해야 합니다.")
     if access_mode == "api" and kling.get("official_api_access_confirmed") is not True:
         issues.append("Kling 공식 API 접근 확인이 필요합니다.")
+
+
+def _check_comfy_cloud(comfy_cloud: dict[str, Any], issues: list[str]) -> None:
+    if comfy_cloud.get("subscription_ready") is not True:
+        issues.append("Comfy Cloud API 사용 가능 구독 확인이 필요합니다.")
+    if not comfy_cloud.get("api_key_env"):
+        issues.append("Comfy Cloud API 키를 읽을 환경 변수 이름이 필요합니다.")
+    if comfy_cloud.get("readonly_connection_verified") is not True:
+        issues.append("Comfy Cloud 읽기 전용 API 연결 확인이 필요합니다.")
+    if comfy_cloud.get("workflow_api_json_ready") is not True:
+        issues.append("Comfy Cloud API 형식 작업 흐름 JSON이 필요합니다.")
+
+    estimated = comfy_cloud.get("estimated_credits_per_run")
+    maximum = comfy_cloud.get("max_credits_per_run")
+    if not isinstance(maximum, (int, float)) or maximum <= 0:
+        issues.append("Comfy Cloud 실행당 크레딧 상한을 0보다 크게 정해야 합니다.")
+    elif not isinstance(estimated, (int, float)):
+        issues.append("Comfy Cloud 예상 실행 크레딧을 기록해야 합니다.")
+    elif estimated > maximum:
+        issues.append(
+            f"Comfy Cloud 예상 비용 {estimated} 크레딧이 상한 {maximum} 크레딧을 넘습니다."
+        )
 
 
 def _write_report(

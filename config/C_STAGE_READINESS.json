@@ -23,5 +23,17 @@
     "selected_resolution": "720p",
     "native_audio": false,
     "official_api_access_confirmed": false
+  },
+  "comfy_cloud": {
+    "enabled": true,
+    "subscription_ready": true,
+    "api_key_env": "COMFY_CLOUD_API_KEY",
+    "readonly_connection_verified": false,
+    "workflow_api_json_ready": true,
+    "workflow_name": "api_kling_v3_video",
+    "workflow_api_json": "config/workflows/api_kling_v3_video.json",
+    "estimated_credits_per_run": 177.2,
+    "max_credits_per_run": 20,
+    "actual_generation_allowed": false
   }
 }
