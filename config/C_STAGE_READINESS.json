@@ -1,0 +1,27 @@
+{
+  "checked_date": "2026-06-09",
+  "external_calls_allowed": false,
+  "dry_run_required": true,
+  "max_test_cuts": 1,
+  "max_budget_krw": 0,
+  "rights_policy": "fictional_only",
+  "seedance": {
+    "enabled": false,
+    "account_ready": false,
+    "api_key_env": "ARK_API_KEY",
+    "model_activated": false,
+    "prepaid_resource_pack_confirmed": false,
+    "selected_model": "undecided",
+    "selected_mode": "undecided",
+    "real_face_assets_allowed": false
+  },
+  "kling": {
+    "enabled": false,
+    "access_mode": "web_ui",
+    "account_ready": false,
+    "credits_budget_approved": false,
+    "selected_resolution": "720p",
+    "native_audio": false,
+    "official_api_access_confirmed": false
+  }
+}
