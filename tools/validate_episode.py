@@ -86,7 +86,7 @@ def validate_episode(episode_dir: Path) -> ValidationResult:
     for cut_name, cut_text in _parse_cuts(text):
         for field_name in REQUIRED_MODEL_READINESS_FIELDS:
             if not re.search(
-                rf"^- {re.escape(field_name)}:\s*\S+",
+                rf"^- {re.escape(field_name)}:[^\S\r\n]*\S+",
                 cut_text,
                 flags=re.MULTILINE,
             ):
@@ -106,8 +106,17 @@ def _parse_cuts(text: str) -> list[tuple[str, str]]:
     headings = list(re.finditer(r"^### (CUT_\d+)\s*$", text, flags=re.MULTILINE))
     cuts: list[tuple[str, str]] = []
 
-    for index, heading in enumerate(headings):
-        end = headings[index + 1].start() if index + 1 < len(headings) else len(text)
+    for heading in headings:
+        next_heading = re.search(
+            r"^#{2,3}\s+\S+",
+            text[heading.end() :],
+            flags=re.MULTILINE,
+        )
+        end = (
+            heading.end() + next_heading.start()
+            if next_heading
+            else len(text)
+        )
         cuts.append((heading.group(1), text[heading.end() : end]))
 
     return cuts

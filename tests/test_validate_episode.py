@@ -43,6 +43,45 @@ class ValidateEpisodeTests(unittest.TestCase):
         self.assertIn("CUT_001: rights_or_face_policy 항목이 없습니다.", result.errors)
         self.assertIn("CUT_001: fallback_plan 항목이 없습니다.", result.errors)
 
+    def test_blank_model_readiness_fields_are_reported(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            episode_dir = Path(temp_dir) / "EP99_sample"
+            episode_dir.mkdir()
+            (episode_dir / "EP99_SHOT_PLAN.md").write_text(
+                "\n".join(
+                    [
+                        "# EP99_SHOT_PLAN",
+                        "",
+                        "### CUT_001",
+                        "",
+                        "- planned_duration: 7초",
+                        "- target_video_model:",
+                        "- generation_mode: image_to_video_first_frame",
+                        "- reference_assets: character",
+                        "- aspect_ratio: 16:9",
+                        "- audio_plan: tts_only",
+                        "- model_limit_note: 확인 필요",
+                        "- rights_or_face_policy:",
+                        "- generation_risk: low",
+                        "- fallback_plan:",
+                        "- review_status: ready_for_image_prompt",
+                        "",
+                        "## 모델 관련 필드 설명",
+                        "",
+                        "- target_video_model: Kling, Seedance 중 하나",
+                        "- rights_or_face_policy: 권리 확인 내용을 적는다",
+                        "- fallback_plan: 실패 시 대응을 적는다",
+                    ]
+                ),
+                encoding="utf-8-sig",
+            )
+
+            result = validate_episode(episode_dir)
+
+        self.assertIn("CUT_001: target_video_model 항목이 없습니다.", result.errors)
+        self.assertIn("CUT_001: rights_or_face_policy 항목이 없습니다.", result.errors)
+        self.assertIn("CUT_001: fallback_plan 항목이 없습니다.", result.errors)
+
     def test_review_report_is_written_in_korean(self) -> None:
         with TemporaryDirectory() as temp_dir:
             report_path = Path(temp_dir) / "review.md"
