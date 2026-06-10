@@ -2,7 +2,7 @@
 
 ## 현재 상태
 
-- 시작 이미지: `slide_09_moon_bear_woman.png`
+- 시작 이미지: `slide_09_moon_bear_woman.jpg` (`1080×1350`)
 - Comfy Cloud 작업 흐름: `test_wan_moon_motion_no_run`
 - 모델 템플릿: Wan 2.5 이미지에서 비디오
 - 표시 비용: 105.5 credits/Run
